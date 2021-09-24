@@ -1,0 +1,35 @@
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.logo img {
+  width: 290px;
+  height: 80px;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: black;
+  
+}
+
+nav
+{
+    overflow: hidden;
+    margin-left: 80px;
+}
+
+nav a
+{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+    margin-right: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+nav a:hover
+{
+    background-color: #D3D3D3;
+}
