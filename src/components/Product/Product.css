@@ -1,0 +1,17 @@
+.single-product
+{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+.single-product img
+{
+    margin-right: 20px;
+}
+
+.product-details
+{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
