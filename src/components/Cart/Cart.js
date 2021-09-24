@@ -1,36 +1,60 @@
-import React from 'react';
-import './Cart.css'
+import React from "react";
+import "./Cart.css";
 
-const Cart = () => {
-    return (
+const Cart = (props) => {
+  const { cart } = props;
+
+  let totalQuantity = 0;
+  let total = 0;
+  for (const product of cart) {
+    if (!product.quantity) {
+      product.quantity = 1;
+    }
+    total = total + product.price * product.quantity;
+    totalQuantity = totalQuantity + product.quantity;
+  }
+
+  const shipping = total > 0 ? 15 : 0;
+  const tax = (total + shipping) * 10;
+  const grandTotal = total + shipping + tax;
+
+  return (
+    <div>
+      <p style={{ textAlign: "center" }}>
+        <strong>Order Summery</strong>
+      </p>
+      <p style={{ textAlign: "center" }}>
+        Items Order{" "}
+        <span style={{ color: "brown", fontWeight: "bold" }}>
+          {totalQuantity}
+        </span>
+      </p>
+
+      <div className="calculation">
         <div>
-            <p style={{textAlign:'center'}}><strong>Order Summery</strong></p>
-            <p style={{textAlign:'center'}}>Items Order <span style={{color:'brown',fontWeight:'bold'}}>0</span></p>
-
-            <div className="calculation">
-            <div>
-            <p>Items:</p>
-            <p>Shipping &#38; Handling:</p>
-            <p>Total before tax:</p>
-            <p>Estimated Tax:</p>
-            </div>
-
-            <div>
-                <p>$00.0</p>
-                <p>$00.0</p>
-                <p>$00.0</p>
-                <p>$00.0</p>
-            </div>
-            </div>
-
-            <p style={{textAlign:'center', color:'brown'}}><strong>TOTAL : </strong></p>
-
-            <div className="review-btn">
-            <button>Review Order</button>
-            </div>
-
+          <p>Items :</p>
+          <p>Shipping &#38; Handling :</p>
+          <p>Tax :</p>
+          <p>Total :</p>
         </div>
-    );
+
+        <div>
+          <p>{totalQuantity}</p>
+          <p>{shipping}</p>
+          <p>{tax.toFixed(2)}</p>
+          <p>{total.toFixed(2)}</p>
+        </div>
+      </div>
+
+      <p style={{ textAlign: "center", color: "brown" }}>
+        <strong>TOTAL : </strong>${grandTotal.toFixed(2)}
+      </p>
+
+      <div className="review-btn">
+        <button>Review Order</button>
+      </div>
+    </div>
+  );
 };
 
 export default Cart;

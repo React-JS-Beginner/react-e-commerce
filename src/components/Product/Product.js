@@ -21,7 +21,7 @@ const Product = (props) => {
                 <p style={{fontSize:'14px'}}>
                     Only <span style={{color:'brown',fontWeight:'bold'}}>{stock}</span> left in stock - order soon
                     </p>
-                <button> {element} &nbsp; add to cart</button>
+                <button onClick={() => props.handleAddToCart(props.product)}> {element} &nbsp; add to cart</button>
             </div>
 
         </div>
