@@ -7,15 +7,17 @@ const Product = (props) => {
 
     return (
         <div className="single-product">
-            <div>
+            <div className="display-product">
                 <img src={img} alt="" />
             </div>
 
             <div className="product-details">
-                <p style={{color:'blue'}}>Name: {name}</p>
+                <p style={{color:'blue'}}>{name}</p>
                 <p>By: <strong>{seller}</strong></p>
                 <p>${price}</p>
-                <p>Only {stock} left in stock - order soon</p>
+                <p style={{fontSize:'14px'}}>
+                    Only <span style={{color:'brown',fontWeight:'bold'}}>{stock}</span> left in stock - order soon
+                    </p>
                 <button>add to cart</button>
             </div>
 
