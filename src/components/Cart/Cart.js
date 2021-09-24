@@ -8,13 +8,14 @@ const Cart = (props) => {
   let total = 0;
   for (const product of cart) {
     if (!product.quantity) {
-      product.quantity = 1;
+      product.quantity = 1; //create quantity not from products.JSON
     }
     total = total + product.price * product.quantity;
     totalQuantity = totalQuantity + product.quantity;
   }
 
-  const shipping = total > 0 ? 15 : 0;
+  const shipping = totalQuantity > 0 ? 15 : 0; //shorcut
+  //   const shipping = 15; //shorcut
   const tax = (total + shipping) * 10;
   const grandTotal = total + shipping + tax;
 
@@ -40,9 +41,9 @@ const Cart = (props) => {
 
         <div>
           <p>{totalQuantity}</p>
-          <p>{shipping}</p>
-          <p>{tax.toFixed(2)}</p>
-          <p>{total.toFixed(2)}</p>
+          <p>${shipping}</p>
+          <p>${tax.toFixed(2)}</p>
+          <p>${total.toFixed(2)}</p>
         </div>
       </div>
 
