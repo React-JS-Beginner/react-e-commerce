@@ -12,7 +12,41 @@
 .product-details
 {
     margin-bottom: 20px;
+    /* width: 585px; */
+    width: 100%;
+    /* border: 2px solid brown; */
+    
 }
+.title p
+{
+  color: blue;
+}
+.main-details
+{
+  display: flex;
+      
+}
+.details
+{
+  /* border: 2px solid brown; */
+  margin-right: 6%;
+}
+.ratings-features
+{
+  /* border: 2px solid brown; */
+  margin-top: 8%;
+}
+.stars
+{
+  color: #f0c14b;
+  
+}
+.features li
+{
+  font-size: 12px;
+  color: gray;
+}
+
 button {
   background-color: #f0c14b;
   padding: 5px 80px;

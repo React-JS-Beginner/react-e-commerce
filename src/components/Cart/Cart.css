@@ -1,9 +1,12 @@
 .calculation {
   font-size: 14px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;  
 }
-
+.dollars
+{
+  margin-left: 8%;
+}
 button {
   background-color: #f0c14b;
   padding: 5px 80px;

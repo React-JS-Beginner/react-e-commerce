@@ -22,7 +22,7 @@ const Cart = (props) => {
   return (
     <div>
       <p style={{ textAlign: "center" }}>
-        <strong>Order Summery</strong>
+        <strong>Order Summary</strong>
       </p>
       <p style={{ textAlign: "center" }}>
         Items Order{" "}
@@ -39,7 +39,7 @@ const Cart = (props) => {
           <p>Total :</p>
         </div>
 
-        <div>
+        <div className="dollars">
           <p>{totalQuantity}</p>
           <p>${shipping}</p>
           <p>${tax.toFixed(2)}</p>
@@ -54,6 +54,7 @@ const Cart = (props) => {
       <div className="review-btn">
         <button>Review Order</button>
       </div>
+
     </div>
   );
 };
