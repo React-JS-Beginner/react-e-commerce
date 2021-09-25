@@ -54,7 +54,6 @@ const Cart = (props) => {
       <div className="review-btn">
         <button>Review Order</button>
       </div>
-
     </div>
   );
 };

@@ -1,10 +1,9 @@
 .calculation {
   font-size: 14px;
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 }
-.dollars
-{
+.dollars {
   margin-left: 8%;
 }
 button {

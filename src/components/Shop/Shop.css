@@ -3,16 +3,32 @@
   align-items: baseline;
   justify-content: center;
   margin-left: 10%;
-  
+
   /* border: 2px solid brown; */
 }
+.search {
+  text-align: center;
+  height: 60px;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.search input {
+  width: 60%;
+  font-size: 15px;
+  padding: 5px 10px;
+  outline: none;
+}
 .all-products {
   border-right: 1px solid lightgray;
   /* border: 2px solid brown; */
   width: 70%;
   padding-right: 1%;
 }
+
+
 
 .cart {
   /* border: 2px solid brown; */
